@@ -255,8 +255,8 @@ export default function EmergencyPage() {
             <Shield className="h-8 w-8 text-white" />
           </div>
           <div>            <h1 className="text-xl xs:text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent font-poppins">
-              Emergency Services
-            </h1>
+            Emergency Services
+          </h1>
             <p className="text-sm xs:text-base md:text-lg text-gray-600 font-medium">Rapid response and ambulance dispatch system</p>
           </div>
         </div>
@@ -430,15 +430,14 @@ export default function EmergencyPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium capitalize ${
-                        case_.severity === "critical"
+                      className={`px-2 py-1 rounded-full text-xs font-medium capitalize ${case_.severity === "critical"
                           ? "bg-red-100 text-red-700"
                           : case_.severity === "high"
                             ? "bg-orange-100 text-orange-700"
                             : case_.severity === "medium"
                               ? "bg-yellow-100 text-yellow-700"
                               : "bg-green-100 text-green-700"
-                      }`}
+                        }`}
                     >
                       {case_.severity} Priority
                     </span>
@@ -478,8 +477,11 @@ export default function EmergencyPage() {
 
             <div className="p-6 space-y-4">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Patient Name</label>
+                <label htmlFor="patient-name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Patient Name
+                </label>
                 <input
+                  id="patient-name"
                   type="text"
                   value={bookingForm.patientName}
                   onChange={(e) => setBookingForm((prev) => ({ ...prev, patientName: e.target.value }))}
@@ -489,8 +491,11 @@ export default function EmergencyPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Emergency Type</label>
+                <label htmlFor="emergency-type" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Emergency Type
+                </label>
                 <select
+                  id="emergency-type"
                   value={bookingForm.emergencyType}
                   onChange={(e) => setBookingForm((prev) => ({ ...prev, emergencyType: e.target.value }))}
                   className="w-full px-4 py-3 glass-morphism border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -507,8 +512,11 @@ export default function EmergencyPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Severity Level</label>
+                <label htmlFor="severity-level" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Severity Level
+                </label>
                 <select
+                  id="severity-level"
                   value={bookingForm.severity}
                   onChange={(e) => setBookingForm((prev) => ({ ...prev, severity: e.target.value as any }))}
                   className="w-full px-4 py-3 glass-morphism border border-white/30 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -521,8 +529,11 @@ export default function EmergencyPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Contact Number</label>
+                <label htmlFor="contact-number" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Contact Number
+                </label>
                 <input
+                  id="contact-number"
                   type="tel"
                   value={bookingForm.contactNumber}
                   onChange={(e) => setBookingForm((prev) => ({ ...prev, contactNumber: e.target.value }))}
@@ -532,8 +543,11 @@ export default function EmergencyPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Description</label>
+                <label htmlFor="description" className="block text-sm font-semibold text-gray-700 mb-2">
+                  Description
+                </label>
                 <textarea
+                  id="description"
                   value={bookingForm.description}
                   onChange={(e) => setBookingForm((prev) => ({ ...prev, description: e.target.value }))}
                   className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
@@ -559,7 +573,9 @@ export default function EmergencyPage() {
                     <MapPin className="h-4 w-4 text-blue-600" />
                     <span className="text-sm font-semibold text-gray-900">Emergency Location</span>
                   </div>
+                  <label htmlFor="manual-address" className="sr-only">Manual Address</label>
                   <input
+                    id="manual-address"
                     type="text"
                     value={bookingForm.manualAddress}
                     onChange={(e) => setBookingForm((prev) => ({ ...prev, manualAddress: e.target.value }))}
@@ -569,6 +585,7 @@ export default function EmergencyPage() {
                 </div>
               )}
             </div>
+
 
             <div className="p-6 border-t border-white/20">
               <div className="flex space-x-4">

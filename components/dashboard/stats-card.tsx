@@ -1,10 +1,11 @@
 import type { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ElementType } from "react"
 
 interface StatsCardProps {
   title: string
   value: number
-  icon: LucideIcon
+  icon: ElementType
   color: "blue" | "green" | "purple" | "orange"
   loading?: boolean
 }
