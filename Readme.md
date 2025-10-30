@@ -255,8 +255,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Pratyush Kumar**
-- GitHub: [@PratyushKumar43](https://github.com/PratyushKumar43)
-- LinkedIn: [Your LinkedIn Profile]
+- GitHub: [Shakti Prasad Barik](https://github.com/shakti20062003)
+- Email: shaktiprasadbarik0490@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -267,7 +267,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - The Open Source Community
 
 ---
-
-⭐ **Star this repository if you find it helpful!**
-
-*Med-AI - Transforming Healthcare with Artificial Intelligence*
